@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 // mongodb uri 
-const uri = "mongodb+srv://taskMaster:fa0rPNlqX8UEoEv6@taskmaster.xualaxs.mongodb.net/";
+const uri = "mongodb+srv://taskMaster:fa0rPNlqX8UEoEv6@taskmaster.xualaxs.mongodb.net/task-cart";
 
 const client = new MongoClient(uri, {
   serverApi: {
