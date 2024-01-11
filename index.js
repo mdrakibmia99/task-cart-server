@@ -1,5 +1,6 @@
 const express = require('express');
 var cors = require('cors')
+require("dotenv").config();
 const multer = require('multer');
 const path = require('path');
 const { MongoClient, ServerApiVersion } = require('mongodb');
@@ -10,8 +11,7 @@ app.use(express.json());
 
 
 // mongodb uri 
-const uri = "mongodb+srv://taskMaster:fa0rPNlqX8UEoEv6@taskmaster.xualaxs.mongodb.net/task-cart";
-
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
